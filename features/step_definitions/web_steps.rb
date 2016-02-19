@@ -2,6 +2,10 @@ Given /^I am on the posts index page$/ do
   visit posts_path
 end
 
+Given /^I am on that post's page$/ do
+  visit post_path(@post.id)
+end
+
 Given /^that user is logged in$/ do
   visit "/log_in/"
 
