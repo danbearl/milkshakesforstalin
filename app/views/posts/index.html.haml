@@ -1,0 +1,7 @@
+-posts.each do |post|
+  .post
+    .post-title
+      %h2= link_to post.title, post_path(post.id)
+    .post-date
+      %p= post.created_at.to_s
+

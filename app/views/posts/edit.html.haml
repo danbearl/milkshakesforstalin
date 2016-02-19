@@ -1,2 +1,4 @@
-%h1 Posts#edit
-%p Find me in app/views/posts/edit.html.haml
+%h1 Editing post
+
+=form_for post do |f|
+  =render partial: "form", locals: {f: f}

@@ -1,15 +1,4 @@
 %h1 Creating new post for blog
 
 = form_for post do |f|
-  .field
-    =f.label :title
-    %br
-    =f.text_field :title
-
-  .field
-    =f.label :body
-    %br
-    =f.text_area :body
-
-  .action
-    =f.submit
+  =render partial: "form", locals: {f: f}
