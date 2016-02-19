@@ -14,5 +14,15 @@
             = flash[level]
     .nav.user-nav
       %ul
-        =link_to "New Post", new_post_path
+        %li
+          =link_to "New Post", new_post_path
+        %li
+          =link_to "New Recipe", new_recipe_path
+    .nav.main-nav
+      %ul
+        %li
+          =link_to "Blog", posts_path
+        %li
+          =link_to "Recipes", recipes_path
+      
     = yield

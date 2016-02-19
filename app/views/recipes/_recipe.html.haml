@@ -1,0 +1,8 @@
+%p= recipe.description
+
+%ul
+  -recipe.ingredients.each do |ingredient|
+    %li= "#{ingredient.quantity} #{ingredient.name} #{ingredient.preparation}"
+
+:markdown
+  #{recipe.instructions}

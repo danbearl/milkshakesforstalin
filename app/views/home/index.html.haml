@@ -6,3 +6,10 @@
 
       :markdown
         latest_post.body
+.right-column
+  -if latest_recipe
+    %h2 Most Recent Recipe
+    %article
+      %h3= link_to latest_recipe.name, recipe_path(latest_recipe.id)
+
+      =render partial: "recipes/recipe", locals: {recipe: latest_recipe}

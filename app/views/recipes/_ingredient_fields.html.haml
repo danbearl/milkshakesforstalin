@@ -1,0 +1,12 @@
+.form-inline
+  = f.hidden_field :_destroy, class: 'removable'
+  .form-group
+    = f.label :quantity
+    = f.text_field :quantity
+  .form-group
+    = f.label :name
+    = f.text_field :name
+  .form-group
+    = f.label :preparation
+    = f.text_field :preparation
+  = remove_child_button "Remove"

@@ -1,0 +1,16 @@
+.row
+  .span12
+    %h1 Datil Dave's Recipes
+
+- recipes.each do |recipe|
+  .row
+    .span12
+      %h2= link_to recipe.name, recipe
+      %p= recipe.description
+      - if current_user
+        %br
+        =link_to "Edit", edit_recipe_path(recipe)
+        |
+        =link_to "Delete", recipe, data: { confirm: "Deleting is irreversible. Do you wish to continue?" }, method: :delete
+
+= will_paginate recipes

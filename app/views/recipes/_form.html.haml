@@ -1,0 +1,22 @@
+%dl
+  = f.label :name
+  = f.text_field :name
+%dl
+  = f.label :description
+  = f.text_area :description
+
+%div
+  =add_child_button "New Ingredient", :ingredients, "#ingredients"
+  =new_fields_template f, :ingredients
+
+#ingredients
+  =f.fields_for :ingredients do |builder|
+    %div
+      =render "ingredient_fields", f: builder
+
+%dl
+  = f.label :instructions
+  = f.text_area :instructions
+
+%div
+  = f.submit nil, class: 'btn btn-primary'
