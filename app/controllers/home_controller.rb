@@ -1,4 +1,3 @@
 class HomeController < ApplicationController
-  def index
-  end
+  expose(:latest_post) { Post.order('created_at DESC').first }
 end

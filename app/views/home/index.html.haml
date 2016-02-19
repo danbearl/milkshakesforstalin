@@ -1,0 +1,8 @@
+.left-column
+  -if latest_post
+    %h2 Most Recent Post
+    %article
+      %h3= link_to latest_post.title, post_path(latest_post.id)
+
+      :markdown
+        latest_post.body
